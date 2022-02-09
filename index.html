@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive product JQUERY</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="box-container">
+        <div class="box">
+            <div class="image-container">
+                <div class="big-image">
+                    <img src="image1.png" widht="250" height="170" alt="">
+                   
+                </div>
+                <div class="small-image">
+                    <img class="active" src="image2.png" widht="250" height="170" alt="">
+                    <img src="image3.png" widht="250" height="170" alt="">
+                </div>
+
+            </div>
+
+            <div class="content">
+                <h3 class="title">watch for men</h3>
+                <div class="price">Price :  $1000</div>
+                   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, repellat?</p>
+
+                  <form action="" >
+                        <div class="dropDown">
+                            <span>size : </span>
+                            <select name="" id="">
+                                <option value="small">small</option>
+                                <option value="medium">medium</option>
+                                <option value="large">large</option>
+                                <option value="extra large">extra large</option>
+                            </select>
+                            <span>color : </span>
+                            <select name="" id="">
+                                <option value="black">black</option>
+                                <option value="blue">blue</option>
+                                <option value="white">white</option>
+                                
+                            </select>
+                        </div>
+                    </form>
+
+                        <div class="quantity">
+                            <span>quantity :</span>
+                            <input type="number"  value="1">
+                        </div>
+                    </form>
+                    <a href="#"><button class="btn"> <i class="fas fa-shopping-cart"></i> add to cart</button></a>
+                    <span class="stock"> <i class="fas fa-check"></i> in stock</span>
+                    <div class="share">
+                        <a href=""> facebook</a>
+                        <a href=""> twitter</a>
+                        <a href=""> instagram</a>
+                        <a href=""> pinteret</a>
+                    </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"> </script>
+
+    <script>
+
+        $(document).ready(function(){
+            $('.small-image img').click(function(){
+                $(this).addClass('active').siblings().removeClass('active');
+                let image1 = $(this).attr('src');
+                $('.big-image img').attr('src',image1);
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  top: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+  font-family: Arial, Helvetica, sans-serif;
+}
+html {
+  font-size: 50%;
+}
+.box-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 100px;
+  background: #ccc;
+}
+.box-container .box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  width: 90rem;
+  padding: 1rem;
+  margin: 2rem;
+  box-shadow: 0 0.3rem 0.5rem #3337;
+  border-radius: 4px;
+}
+
+.box-container .box .image-container {
+  text-align: center;
+  padding: 4rem 0.5rem;
+}
+
+.box-container .box .image-container .big-image {
+  box-shadow: 0 0.3rem 0.5rem #3337;
+  border: 0.5rem solid #fff;
+  padding: 2rem 1rem;
+  background: #eee;
+}
+.box-container .box .image-container .big-image img {
+  height: 30rem;
+}
+.box-container .box .image-container .small-image {
+  padding: 1rem 0;
+}
+.box-container .box .image-container .small-image img {
+  box-shadow: 0 0.3rem 0.5rem #3337;
+  border: 0.5rem solid #fff;
+  padding: 1rem;
+  background: #eee;
+  margin: 1rem;
+  height: 8rem;
+  cursor: pointer;
+}
+.box-container .box .image-container .small-image img.active,
+.box-container .box .image-container .small-image img:hover {
+  background: #ccc;
+}
+.box-container .box .content {
+  padding: 1.3rem;
+}
+.box-container .box .content .title {
+  font-size: 3rem;
+  color: #333;
+  padding: 1rem 0;
+  text-transform: uppercase;
+}
+.box-container .box .content .title:hover {
+  color: rgb(97, 96, 96);
+  letter-spacing: 0.3rem;
+}
+
+.box-container .box .content .price {
+  font-size: 2.5rem;
+  color: #333;
+  border-top: 0.2rem solid #333;
+  border-bottom: 0.2rem solid #333;
+  padding: 0.5rem;
+  display: inline-block;
+}
+.box-container .box .content p {
+  font-size: 1.5rem;
+  color: #333;
+  padding: 1rem 0;
+}
+.box-container .box .content form .dropDown span {
+  font-size: 2rem;
+  display: block;
+  color: #333;
+  padding: 1rem 0;
+}
+.box-container .box .content form .dropDown select {
+  width: 100%;
+  height: 3rem;
+  font-size: 1.5rem;
+  color: #666;
+}
+.box-container .box .content .quantity span {
+  font-size: 2rem;
+  color: #333;
+}
+.box-container .box .content .quantity input {
+  height: 3rem;
+  width: 4.4rem;
+  text-align: 2rem;
+  color: #666;
+  margin: 2rem;
+}
+
+.box-container .box .content .btn {
+  height: 4rem;
+  width: 15rem;
+  background: #333;
+  color: #fff;
+  margin-right: 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 1px;
+  font-size: 1.7rem;
+}
+.box-container .box .content .btn:hover {
+  background: #666;
+}
+.box-container .box .content .stock {
+  font-size: 1.7rem;
+  color: #666;
+}
+.box-container .box .content .stock i {
+  color: green;
+}
+.box-container .box .content .share {
+  padding: 4rem 0;
+}
+
+.box-container .box .content .share a {
+  color: #333;
+  border: 0.1rem solid #666;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  margin-right: 1rem;
+  font-size: 1.4rem;
+  display: inline-block;
+}
+
+.box-container .box .content .share a:hover {
+  background: #333;
+  color: #eee;
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+  .box-container .box {
+    flex-flow: column;
+  }
+}
+@media (max-width: 400px) {
+  html {
+    font-size: 50%;
+  }
+  .box-container .box .image-container .big-image img {
+    height: auto;
+    width: 100%;
+  }
+}
